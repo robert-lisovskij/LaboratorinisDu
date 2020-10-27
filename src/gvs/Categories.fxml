@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="845.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gvs.CategoriesController">
+   <children>
+      <VBox prefHeight="563.0" prefWidth="745.0">
+         <children>
+            <Label prefHeight="20.0" prefWidth="539.0" style="-fx-background-color: #00BFFF;" text="To change category's info double click on title." textFill="WHITE" VBox.vgrow="ALWAYS" />
+            <Label layoutX="10.0" layoutY="36.0" prefHeight="20.0" prefWidth="539.0" style="-fx-background-color: #00BFFF;" text="Hit ENTER after the changes. Don't forget to click &quot;Export files&quot; to save." textFill="WHITE" VBox.vgrow="ALWAYS" />
+            <TableView fx:id="categoryTable" prefHeight="500.0" prefWidth="683.0" VBox.vgrow="ALWAYS">
+               <columns>
+                  <TableColumn prefWidth="75.0" text="ID" />
+                  <TableColumn fx:id="categoryTitleColumn" onEditCommit="#changeCategoryTitle" prefWidth="86.0" text="Title" />
+               </columns>
+            </TableView>
+         </children>
+      </VBox>
+      <Separator orientation="VERTICAL" prefHeight="200.0" />
+      <VBox prefHeight="563.0" prefWidth="507.0">
+         <children>
+            <Label prefHeight="50.0" prefWidth="302.0" style="-fx-background-color: #00BFFF;" text="ADD CATEGORY" textAlignment="CENTER" textFill="WHITE" />
+            <TextField fx:id="categoryTitle" promptText="Title" />
+            <Button fx:id="AddP" mnemonicParsing="false" onAction="#addCategory" prefHeight="31.0" prefWidth="302.0" style="-fx-background-color: #0000FF;" text="Add Category" textFill="WHITE" />
+            <Separator prefWidth="200.0" />
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="302.0" style="-fx-background-color: #00BFFF;" text="ADD TASK" textAlignment="CENTER" textFill="WHITE" />
+            <TextField promptText="Title" />
+            <TextField promptText="Description" />
+            <TextField promptText="Category ID" />
+            <TextField fx:id="addValue" promptText="Value" />
+            <Button fx:id="AddV" layoutX="10.0" layoutY="184.0" mnemonicParsing="false" onAction="#addTask" prefHeight="31.0" prefWidth="302.0" style="-fx-background-color: #0000FF;" text="Add Task" textFill="WHITE" />
+            <Separator prefHeight="55.0" prefWidth="299.0" />
+            <Button mnemonicParsing="false" onAction="#deleteCategory" prefHeight="31.0" prefWidth="130.0" style="-fx-background-color: #0000FF;" text="Delete Category" textFill="WHITE" />
+            <TextField fx:id="addValue1" prefHeight="58.0" prefWidth="301.0" promptText="Value" visible="false" />
+            <Button fx:id="valButton" mnemonicParsing="false" onAction="#valueAlert" prefHeight="31.0" prefWidth="130.0" style="-fx-background-color: #0000FF;" text="Check Value" textFill="WHITE" />
+         </children>
+      </VBox>
+   </children>
+</HBox>

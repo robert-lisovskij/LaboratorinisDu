@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="841.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gvs.MainController">
+   <children>
+      <MenuBar fx:id="menubar" style="-fx-background-color: #00BFFF;">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
+                  <MenuItem mnemonicParsing="false" onAction="#importFile" text="Import file" />
+                  <MenuItem mnemonicParsing="false" onAction="#exportFile" text="Export file" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#openUserManager" text="Open user management" />
+                  <MenuItem mnemonicParsing="false" onAction="#openCategoryManager" text="Open category management" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#openAbout" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <HBox prefHeight="570.0" prefWidth="838.0" VBox.vgrow="ALWAYS">
+         <children>
+            <PieChart fx:id="userS" prefHeight="600.0" prefWidth="391.0" />
+            <AreaChart fx:id="categorieS" prefHeight="600.0" prefWidth="449.0">
+              <xAxis>
+                <NumberAxis label="Date" side="BOTTOM" tickLabelGap="1.0" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis label="Number of categories" side="LEFT" />
+              </yAxis>
+            </AreaChart>
+         </children>
+      </HBox>
+   </children>
+</VBox>
